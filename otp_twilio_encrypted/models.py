@@ -39,7 +39,7 @@ class TwilioSMSDevice(Device):
         *CharField*: The secret key used to generate TOTP tokens.
 
     """
-    number = models.CharField(
+    number = EncryptedCharField(
         max_length=16,
         help_text="The mobile number to deliver tokens to."
     )
