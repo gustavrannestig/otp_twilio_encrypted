@@ -11,7 +11,7 @@ setup(
     author='Peter Sagerson',
     author_email='psagersDjwublJf@ignorare.net',
     packages=[
-        'otp_twilio-encrypted',
+        'otp_twilio_encrypted',
     ],
     url='https://github.com/gustavrannestig/otp_twilio_encrypted',
     license='BSD',
