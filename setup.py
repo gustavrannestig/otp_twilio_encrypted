@@ -18,6 +18,7 @@ setup(
     install_requires=[
         'django-otp >= 0.3.0',
         'requests',
+        'django-extensions'
     ],
     classifiers=[
         "Development Status :: 5 - Production/Stable",

@@ -8,6 +8,7 @@ from django.db import models
 from django_otp.models import Device
 from django_otp.oath import totp
 from django_otp.util import random_hex, hex_validator
+from django_extensions.db.fields.encrypted import EncryptedCharField
 
 from .conf import settings
 
