@@ -13,7 +13,7 @@ setup(
     packages=[
         'otp_twilio_encrypted',
     ],
-    url='https://github.com/gustavrannestig/otp_twilio_encrypted',
+    url='git+https://github.com/prototypsthlm/otp_twilio_encrypted',
     license='BSD',
     install_requires=[
         'django-otp >= 0.3.0',
