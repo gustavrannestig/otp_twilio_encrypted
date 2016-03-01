@@ -1,3 +1,0 @@
-include CHANGES LICENSE README.rst
-
-recursive-include otp_twilio_encrypted/migrations *.py
