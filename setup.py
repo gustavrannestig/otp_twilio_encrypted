@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 from distutils.core import setup
-
+from setuptools import setup, find_packages
 
 setup(
     name='django-otp-twilio-encrypted',
@@ -10,9 +10,7 @@ setup(
     long_description=open('README.rst').read(),
     author='Peter Sagerson',
     author_email='psagersDjwublJf@ignorare.net',
-    packages=[
-        'otp_twilio_encrypted',
-    ],
+    packages=find_packages(),
     url='git+https://github.com/prototypsthlm/otp_twilio_encrypted',
     license='BSD',
     install_requires=[
