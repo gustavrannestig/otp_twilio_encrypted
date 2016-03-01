@@ -1,23 +1,21 @@
 #!/usr/bin/env python
 
-from distutils.core import setup
 from setuptools import setup, find_packages
 
+
 setup(
-    name='django-otp-twilio-encrypted',
-    version='0.3.0',
+    name='django-otp-twilio',
+    version='0.3.4',
     description="A django-otp plugin that delivers tokens via Twilio's SMS service.",
     long_description=open('README.rst').read(),
     author='Peter Sagerson',
     author_email='psagersDjwublJf@ignorare.net',
     packages=find_packages(),
-    include_package_data=True,
-    url='git+https://github.com/prototypsthlm/otp_twilio_encrypted',
+    url='https://bitbucket.org/psagers/django-otp',
     license='BSD',
     install_requires=[
         'django-otp >= 0.3.0',
         'requests',
-        'django-extensions'
     ],
     classifiers=[
         "Development Status :: 5 - Production/Stable",
@@ -27,6 +25,7 @@ setup(
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.3",
         "Programming Language :: Python :: 3.4",
+        "Programming Language :: Python :: 3.5",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: BSD License",
         "Topic :: Security",
