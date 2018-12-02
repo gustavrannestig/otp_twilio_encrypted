@@ -1,3 +1,5 @@
+from __future__ import absolute_import, division, print_function, unicode_literals
+
 import re
 
 from django.db import IntegrityError
@@ -31,6 +33,14 @@ class TestTwilioSMS(TestCase):
     def test_instant(self):
         """ Verify a code the instant it was generated. """
         device = self.alice.twiliosmsdevice_set.get()
+        with self.with_time(self._now):
+            token = device.generate_challenge()
+            ok = device.verify_token(token)
+
+        self.assertTrue(ok)
+
+    def test_default_key(self):
+        device = self.alice.twiliosmsdevice_set.create(number='test')
         with self.with_time(self._now):
             token = device.generate_challenge()
             ok = device.verify_token(token)
@@ -96,7 +106,7 @@ class TestTwilioSMS(TestCase):
             device.generate_challenge()
         match = re.match(r'^Token is (\d{6})$', self._delivered)
 
-        self.assertTrue(match is not None)
+        self.assertIsNotNone(match)
         self.assertTrue(device.verify_token(match.group(1)))
 
     #

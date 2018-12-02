@@ -14,10 +14,11 @@ sign: sdist wheel
 	    gpg --detach-sign --armor $$f; \
 	done
 
-upload:
+upload: sign
 	twine upload dist/*
 
 clean:
 	-rm -r build
 	-rm -r dist
 	-rm -r *.egg-info
+	-$(MAKE) -C clean
