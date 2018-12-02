@@ -1,6 +1,7 @@
+from __future__ import absolute_import, division, print_function, unicode_literals
+
 import django.conf
 import django.test.utils
-from django.utils.six import u
 
 
 class Settings(object):
@@ -12,7 +13,7 @@ class Settings(object):
     _defaults = {
         'OTP_TWILIO_ACCOUNT': None,
         'OTP_TWILIO_AUTH': None,
-        'OTP_TWILIO_CHALLENGE_MESSAGE': u("Sent by SMS"),
+        'OTP_TWILIO_CHALLENGE_MESSAGE': "Sent by SMS",
         'OTP_TWILIO_FROM': None,
         'OTP_TWILIO_NO_DELIVERY': False,
         'OTP_TWILIO_TOKEN_TEMPLATE': '{token}',

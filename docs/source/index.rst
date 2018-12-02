@@ -4,6 +4,27 @@ django-otp-twilio
 .. include:: ../../README.rst
 
 
+Installation
+------------
+
+django-otp-twilio can be installed via pip:
+
+    pip install django-otp-twilio
+
+
+Once installed it should be added to INSTALLED_APPS after django_otp core:
+
+    INSTALLED_APPS = [
+        ...
+        'django_otp',
+        'django_otp.plugins.otp_totp',
+        'django_otp.plugins.otp_hotp',
+        'django_otp.plugins.otp_static',
+
+        'otp_twilio',
+    ]
+
+
 Twilio SMS Devices
 ------------------
 
@@ -84,6 +105,15 @@ Default: ``"{token}"``
 A string template for generating the token message. By default, this is just the
 token itself, but you can customize it. The template will be rendered with
 Python string formatting (``template.format(token=token)``).
+
+
+.. setting:: OTP_TWILIO_TOKEN_VALIDITY
+
+**OTP_TWILIO_TOKEN_VALIDITY**
+
+Default: ``30``
+
+The number of seconds for which a delivered token will be valid.
 
 
 Changes

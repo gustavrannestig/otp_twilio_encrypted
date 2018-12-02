@@ -1,3 +1,5 @@
+from __future__ import absolute_import, division, print_function, unicode_literals
+
 from binascii import unhexlify
 import logging
 import requests
@@ -5,6 +7,7 @@ import time
 
 from django.core.exceptions import ImproperlyConfigured
 from django.db import models
+from django.utils.encoding import force_text
 
 from django_otp.models import Device
 from django_otp.oath import TOTP
@@ -18,7 +21,7 @@ logger = logging.getLogger(__name__)
 
 
 def default_key():
-    return random_hex(20)
+    return force_text(random_hex(20))
 
 
 def key_validator(value):
@@ -35,7 +38,12 @@ class TwilioSMSDevice(Device):
 
     .. attribute:: number
 
-        *CharField*: The mobile phone number to deliver to.
+        *CharField*: The mobile phone number to deliver to. `Twilio recommends
+        <https://www.twilio.com/docs/api/rest/sending-messages>`_ using the
+        `E.164 <http://en.wikipedia.org/wiki/E.164>`_ format. For US numbers,
+        this would look like '+15555555555'. At the time of writing, Twilio
+        will try to infer the correct E.164 format if it is not used, but this
+        should not be relied upon.
 
     .. attribute:: key
 

@@ -6,12 +6,10 @@ This is a django-otp plugin that delivers tokens via Twilio's `SMS
 See `django-otp <http://packages.python.org/django-otp>`_ for more information
 on the OTP framework.
 
-This version is supported on Python 2.6, 2.7, and 3.3+; and Django >= 1.4.
+* Repository: https://bitbucket.org/psagers/django-otp
+* Documentation: https://django-otp-twilio.readthedocs.io/
+* Mailing list: https://groups.google.com/forum/#!forum/django-otp
 
-.. warning::
-
-    otp_twilio now contains both South and Django migrations. If you're using
-    South or upgrading to Django 1.7, please see the `upgrade notes`_ in the
-    django-otp documentation first.
+This version is supported on Python 2.7 and 3.4+; and Django 1.8 and 1.10+.
 
 .. _upgrade notes: https://pythonhosted.org/django-otp/overview.html#upgrading
