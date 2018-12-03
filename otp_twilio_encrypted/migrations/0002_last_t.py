@@ -7,7 +7,7 @@ from django.db import models, migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('otp_twilio', '0001_initial'),
+        ('otp_twilio_encrypted', '0001_initial'),
     ]
 
     operations = [
