@@ -12,7 +12,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AddField(
-            model_name='encryptedtwiliosmsdevice',
+            model_name='twiliosmsdevice',
             name='last_t',
             field=models.BigIntegerField(default=-1, help_text='The t value of the latest verified token. The next token must be at a higher time step.'),
             preserve_default=True,
