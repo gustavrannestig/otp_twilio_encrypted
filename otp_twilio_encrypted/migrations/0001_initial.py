@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.db import models, migrations
-import otp_twilio.models
+import otp_twilio_encrypted.models
 from django.conf import settings
 
 
